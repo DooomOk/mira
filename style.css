@@ -1,0 +1,104 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff2fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+#yes-btn {
+    background-color: #d31162;
+}
+
+#yes-btn:hover {
+    background-color: #a31568;
+}
+
+#no-btn {
+    background-color: #e6574d;
+}
+
+#no-btn:hover {
+    background-color: #8b1c15;
+}
+
+#text {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #d31162;
+}
+
+.smaller-text {
+    font-size: 0.8em; 
+}
+
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #d31162; 
+    animation: confetti-fall 5s infinite;
+}
+
+@keyframes confetti-fall {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+#left-gif, #right-gif {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    height: auto;
+}
+
+#left-gif {
+    left: 130%; 
+}
+
+#right-gif {
+    right: 130%; 
+}
